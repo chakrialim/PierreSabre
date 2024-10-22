@@ -31,7 +31,7 @@ public class Humain {
 	
 	public void direBonjour() {
 		String texte;
-		texte = "Bonjour ! Je m'appelle " + getNom() + "et j'aime boire du";
+		texte = "Bonjour ! Je m'appelle " + getNom() + " et j'aime boire du " + getBoissonPreferee();
 		parler(texte);
 	}
 	
@@ -44,10 +44,10 @@ public class Humain {
 	public void acheter(String bien, int prix) {
 		String texte;
 		if (argent>=prix) {
-			texte = "J'ai " + getArgent() + "sous en poche. Je vais m'offrir un " + bien + " à " + prix + " sous";
+			texte = "J'ai " + getArgent() + " sous en poche. Je vais m'offrir un " + bien + " à " + prix + " sous";
 			perdreArgent(prix);
 		} else {
-			texte = "Je n'ai plus que " + getArgent() + "sous en poche. Je ne peux même pas m'offrir un " + bien + "à " + prix + "sous."; 
+			texte = "Je n'ai plus que " + getArgent() + " sous en poche. Je ne peux même pas m'offrir un " + bien + " à " + prix + " sous."; 
 		}
 		parler(texte);
 	}
