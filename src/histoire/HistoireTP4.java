@@ -19,6 +19,7 @@ public class HistoireTP4 {
 		marco.seFaireExtorquer();
 		marco.recevoir(15);
 		marco.boire();
+
 	}
 
 }
