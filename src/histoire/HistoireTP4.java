@@ -20,10 +20,12 @@ public class HistoireTP4 {
 		marco.boire();
 
 		Yakuza yakuLeNoir = new Yakuza("Yaku Le Noir","whisky", 30);
+		yakuLeNoir.setClan("Warsong");
 		yakuLeNoir.extorquer(marco);
 		
 		Ronin roro = new Ronin("Roro", "shochu", 60);
 		roro.donner(marco);
+		roro.provoquer(yakuLeNoir);
 		
 	}
 

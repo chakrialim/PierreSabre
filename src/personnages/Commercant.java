@@ -11,7 +11,9 @@ public class Commercant extends Humain {
 		String texte;
 		texte = "J'ai tout perdu! Le monde est trop injuste...";
 		this.parler(texte);
-		return this.getArgent();
+		int argentAvant = this.getArgent();
+		this.perdreArgent(argentAvant);
+		return argentAvant;
 	}
 	
 	public void recevoir(int argent) {

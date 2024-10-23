@@ -12,6 +12,10 @@ public class Yakuza extends Humain {
 		this.clan = clan;
 	}
 	
+	public String getClan() {
+		return clan;
+	}
+	
 	public int getReputation() {
 		return reputation;
 	}
@@ -27,6 +31,24 @@ public class Yakuza extends Humain {
 		texte = "J'ai pique les " + somme + " sous de " + victime.getNom() + ", ce qui me fait " + this.getArgent() + " sous dans ma poche. Hi ! Hi !";
 		this.parler(texte);
 		reputation++;
+	}
+	
+	public int perdre() {
+		String texte;
+		int argentAvant = this.getArgent();
+		this.perdreArgent(argentAvant);
+		reputation--;
+		texte = "J'ai perdu mon duel et mes " + argentAvant + " sous, snif... J'ai dehonore le clan de " + getClan() + ".";
+		this.parler(texte);
+		return argentAvant;
+	}
+	
+	public void gagner(int gain) {
+		String texte;
+		this.gagnerArgent(gain);
+		texte = "Ce ronin pensait vraiment battre " + this.getNom() + " du clan de " + this.getClan() + " ? Je l'ai depouille de ses " + gain + " sous.";
+		parler(texte);
+		
 		
 	}
 		
