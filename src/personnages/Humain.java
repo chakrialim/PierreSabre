@@ -14,6 +14,7 @@ public class Humain {
 		this.nom = nom;
 		this.boissonPreferee = boissonPreferee;
 		this.argent = argent;
+		this.direBonjour();
 	}
 
 
@@ -44,10 +45,10 @@ public class Humain {
 	public void acheter(String bien, int prix) {
 		String texte;
 		if (argent>=prix) {
-			texte = "J'ai " + getArgent() + " sous en poche. Je vais m'offrir un " + bien + " à " + prix + " sous";
+			texte = "J'ai " + getArgent() + " sous en poche. Je vais m'offrir un " + bien + " a " + prix + " sous";
 			perdreArgent(prix);
 		} else {
-			texte = "Je n'ai plus que " + getArgent() + " sous en poche. Je ne peux même pas m'offrir un " + bien + " à " + prix + " sous."; 
+			texte = "Je n'ai plus que " + getArgent() + " sous en poche. Je ne peux mï¿½me pas m'offrir un " + bien + " a " + prix + " sous."; 
 		}
 		parler(texte);
 	}
