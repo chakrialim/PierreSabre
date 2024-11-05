@@ -10,17 +10,17 @@ public class Commercant extends Humain {
 	public int seFaireExtorquer() {
 		String texte;
 		texte = "J'ai tout perdu! Le monde est trop injuste...";
-		this.parler(texte);
-		int argentAvant = this.getArgent();
-		this.perdreArgent(argentAvant);
+		parler(texte);
+		int argentAvant = argent;
+		perdreArgent(argentAvant);
 		return argentAvant;
 	}
 	
 	public void recevoir(int argent) {
 		String texte;
 		texte = argent + " sous! Je te remercie genereux donateur!";
-		this.gagnerArgent(argent);
-		this.parler(texte);
+		gagnerArgent(argent);
+		parler(texte);
 	}
 
 }
