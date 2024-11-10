@@ -13,7 +13,7 @@ public class HistoireTP4 {
 		prof.acheter("jeu", 2);
 		prof.acheter("kimono", 50);
 		
-		Commercant marco = new Commercant("Marco","",20);	
+		Commercant marco = new Commercant("Marco",20);	
 		marco.getBoissonPreferee();
 		marco.seFaireExtorquer();
 		marco.recevoir(15);
