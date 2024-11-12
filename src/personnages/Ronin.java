@@ -9,7 +9,7 @@ public class Ronin extends Humain{
 	}
 	
 	public void donner(Commercant beneficiaire) {
-		int somme = (int) (argent * 0.1);
+		int somme = (int) (getArgent() * 0.1);
 		String texte;
 		texte = beneficiaire.getNom() + " prend ces " + somme + " sous.";
 		parler(texte);
@@ -31,7 +31,7 @@ public class Ronin extends Humain{
 			honneur--;
 			texte = "J'ai perdu contre ce yakuza, mon honneur et ma bourse ont en pris un coup. ";
 			parler(texte);
-			adversaire.gagner(argent);
+			adversaire.gagner(getArgent());
 			
 		}
 		

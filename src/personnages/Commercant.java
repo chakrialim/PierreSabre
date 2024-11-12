@@ -11,7 +11,7 @@ public class Commercant extends Humain {
 		String texte;
 		texte = "J'ai tout perdu! Le monde est trop injuste...";
 		parler(texte);
-		int argentAvant = argent;
+		int argentAvant = getArgent();
 		perdreArgent(argentAvant);
 		return argentAvant;
 	}
