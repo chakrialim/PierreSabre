@@ -47,9 +47,16 @@ public class Yakuza extends Humain {
 		gagnerArgent(gain);
 		texte = "Ce ronin pensait vraiment battre " + this.getNom() + " du clan de " + getClan() + " ? Je l'ai depouille de ses " + gain + " sous.";
 		parler(texte);
-		
-		
 	}
+	
+	@Override
+	public void direBonjour() {
+		super.direBonjour();
+		String texte;
+		texte = "Mon clan est celui de Warsong";
+		parler(texte);
+	}
+	
 		
 	
 }
