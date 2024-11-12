@@ -1,13 +1,13 @@
 package personnages;
 
-public class Ronin extends Humain{
+public class Ronin extends Humain {
 	private int honneur = 1;
 	private int force = 2 * honneur;
 
 	public Ronin(String nom, String boissonPreferee, int argent) {
 		super(nom, boissonPreferee, argent);
 	}
-	
+
 	public void donner(Commercant beneficiaire) {
 		int somme = (int) (getArgent() * 0.1);
 		String texte;
@@ -15,7 +15,7 @@ public class Ronin extends Humain{
 		parler(texte);
 		beneficiaire.recevoir(somme);
 	}
-	
+
 	public void provoquer(Yakuza adversaire) {
 		int repAdversaire = adversaire.getReputation();
 		String texte;
@@ -26,15 +26,15 @@ public class Ronin extends Humain{
 			texte = "Je t'ai eu petit yakusa!";
 			parler(texte);
 			gagnerArgent(adversaire.perdre());
-			
+
 		} else {
 			honneur--;
 			texte = "J'ai perdu contre ce yakuza, mon honneur et ma bourse ont en pris un coup. ";
 			parler(texte);
 			adversaire.gagner(getArgent());
-			
+
 		}
-		
+
 	}
 
 }

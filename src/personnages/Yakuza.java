@@ -9,7 +9,6 @@ public class Yakuza extends Humain {
 		this.clan = clan;
 	}
 	
-	
 	public String getClan() {
 		return clan;
 	}
@@ -23,7 +22,7 @@ public class Yakuza extends Humain {
 		texte = "Tiens, tiens, ne serait-il pas un faible marchand qui passe par la? ";
 		//this.parler(texte);
 		parler(texte);
-		texte = victime.getNom() + ", si tu tiens à la vie donne moi ta bourse! ";
+		texte = victime.getNom() + ", si tu tiens a la vie donne moi ta bourse! ";
 		parler(texte);
 		int somme =	victime.seFaireExtorquer();
 		gagnerArgent(somme);
@@ -45,6 +44,7 @@ public class Yakuza extends Humain {
 	public void gagner(int gain) {
 		String texte;
 		gagnerArgent(gain);
+		reputation++;
 		texte = "Ce ronin pensait vraiment battre " + this.getNom() + " du clan de " + getClan() + " ? Je l'ai depouille de ses " + gain + " sous.";
 		parler(texte);
 	}

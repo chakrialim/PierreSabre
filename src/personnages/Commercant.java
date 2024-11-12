@@ -1,7 +1,7 @@
 package personnages;
 
 public class Commercant extends Humain {
-	
+
 	public Commercant(String nom, int argent) {
 		super(nom, "the", argent);
 
@@ -15,7 +15,7 @@ public class Commercant extends Humain {
 		perdreArgent(argentAvant);
 		return argentAvant;
 	}
-	
+
 	public void recevoir(int argent) {
 		String texte;
 		texte = argent + " sous! Je te remercie genereux donateur!";

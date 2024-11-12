@@ -7,8 +7,7 @@ public class Samourai extends Ronin {
 		super(nom, boissonPreferee, argent);
 		this.seigneur = seigneur;
 	}
-	
-	 
+
 	@Override
 	public void direBonjour() {
 		super.direBonjour();
@@ -16,7 +15,7 @@ public class Samourai extends Ronin {
 		texte = "Je suis fier de servir le seigneur " + seigneur;
 		parler(texte);
 	}
-	
+
 	public void boire(String boisson) {
 		String texte;
 		texte = "Qu'est-ce que je vais choisir comme boisson? Tiens je vais prendre du " + boisson + ".";
