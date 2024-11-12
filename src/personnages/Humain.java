@@ -17,7 +17,7 @@ public class Humain {
 		this.nom = nom;
 		this.boissonPreferee = boissonPreferee;
 		this.argent = argent;
-		this.direBonjour();
+		direBonjour();
 	}
 
 
